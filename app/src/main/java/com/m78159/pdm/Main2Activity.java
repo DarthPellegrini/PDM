@@ -1,5 +1,6 @@
 package com.m78159.pdm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,7 +13,7 @@ public class Main2Activity extends AppCompatActivity {
 
     final String TAG = "CICLO";
 
-    EditText tempC;
+    private EditText tempC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +64,11 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void calcClick(View view) {
-        double d = Double.parseDouble(tempC.getText().toString());
-        //TODO calculo (tempC * 9/5) + 32
-        Toast.makeText(this,tempC.getText(),Toast.LENGTH_SHORT).show();
+        String result = String.valueOf(( Double.parseDouble(tempC.getText().toString()) * 9/5) + 32);
+        Toast.makeText(this, result,Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, Main2_1Activity.class);
+        intent.putExtra("resultado",result);
+        startActivity(intent);
     }
 
 }
