@@ -65,7 +65,7 @@ public class Main2Activity extends AppCompatActivity {
 
     public void calcClick(View view) {
         String result = String.valueOf(( Double.parseDouble(tempC.getText().toString()) * 9/5) + 32);
-        Toast.makeText(this, result,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, result,Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Main2_1Activity.class);
         intent.putExtra("resultado",result);
         startActivity(intent);
