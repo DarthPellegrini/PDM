@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PDM</string>
+    <string name="app_3_1_calc">Calcular</string>
+    <string name="app_3_1_tax">Tasa</string>
+    <string name="app_3_1_taxEx">Ex: 0.02</string>
+    <string name="app_3_1_title">Ahorro</string>
+    <string name="app_3_1_value">Valor Inicial:</string>
+    <string name="app_3_1_valueEx">Valor en €:</string>
+    <string name="app_3_3_ans1">Puente hacia adelante</string>
+    <string name="app_3_3_ans2">Estrechamiento de pistaDIsminuición acentuada</string>
+    <string name="app_3_3_ans3">Disminuición acentuada</string>
+    <string name="app_3_3_ans4">Estrechamiento del ancho del vehículo</string>
+    <string name="app_3_3_next">Próxima pregunta</string>
+    <string name="app_3_3_quest">"C11 -Cuál es el significado deste señal? "</string>
+    <string name="app_3_3_questNum">Cuestión 11 de 28</string>
+    <string name="app_3_3_title">Cuestionario de tráfico</string>
+    <string name="app_3_4_calc">Calcular cuenta final</string>
+    <string name="app_3_4_couvert">Couvert Artístico €:</string>
+    <string name="app_3_4_divide">Dividir cuenta por:</string>
+    <string name="app_3_4_finalPerson">Valor por pernosa €:</string>
+    <string name="app_3_4_finalTotal">Cuenta Total €:</string>
+    <string name="app_3_4_tax">Tasa de servicio (10%) €:</string>
+    <string name="app_3_4_value">Consumo Total €:</string>
+    <string name="app_3_1_time">Tiempo de Solicitud</string>
+    <string name="app_3_1_timeEx">En meses</string>
+    <string name="app_3_1_applic">Solicitud Mensal</string>
+    <string name="app_3_1_applicEx">Ex: 100.00</string>
+</resources>

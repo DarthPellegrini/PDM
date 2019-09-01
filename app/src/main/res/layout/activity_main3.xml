@@ -8,4 +8,25 @@
     tools:context=".Main3Activity">
 
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Layout 1 - Poupança"
+        android:onClick="aula3_1Click"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Layout 2 - Tabela"
+        android:onClick="aula3_2Click"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Layout 3 - Quiz"
+        android:onClick="aula3_3Click"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Layout 4 - Restaurante"
+        android:onClick="aula3_4Click"/>
+
 </LinearLayout>

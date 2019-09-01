@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">PDM</string>
+    <string name="app_3_1_title">Poupança</string>
+    <string name="app_3_1_value">Valor Inicial:</string>
+    <string name="app_3_1_valueEx">Valor em R$: Ex: 1700,00</string>
+    <string name="app_3_1_applic">Aplicação Mensal</string>
+    <string name="app_3_1_applicEx">Ex: 100,00</string>
+    <string name="app_3_1_time">Tempo de Aplicação</string>
+    <string name="app_3_1_timeEx">Em meses</string>
+    <string name="app_3_1_tax">Taxa</string>
+    <string name="app_3_1_taxEx">Ex: 0,02</string>
+    <string name="app_3_1_calc">Calcular</string>
+    <string name="app_3_3_title">Quiz de Trânsito</string>
+    <string name="app_3_3_questNum">Questão 11 de 28</string>
+    <string name="app_3_3_quest">Q11 - Qual o significado desta placa?</string>
+    <string name="app_3_3_ans1">Ponte a frente</string>
+    <string name="app_3_3_ans2">Estreitamento de pista</string>
+    <string name="app_3_3_ans3">Declive acentuado</string>
+    <string name="app_3_3_ans4">Redução de largura de veículos</string>
+    <string name="app_3_3_next">Próxima pergunta</string>
+    <string name="app_3_4_title" translatable="false">BalaioDeLenha</string>
+    <string name="app_3_4_value">Consumo Total R$:</string>
+    <string name="app_3_4_couvert">Couvert Artístico R$:</string>
+    <string name="app_3_4_divide">Dividir conta por:</string>
+    <string name="app_3_4_calc">Calcular conta final</string>
+    <string name="app_3_4_tax">Taxa de Serviço (10%) R$:</string>
+    <string name="app_3_4_finalTotal">Conta Total R$:</string>
+    <string name="app_3_4_finalPerson">Valor por Pessoa R$:</string>
+
 </resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PDM</string>
+    <string name="app_3_1_calc">Calculate</string>
+    <string name="app_3_1_tax">Tax</string>
+    <string name="app_3_1_taxEx">Ex: 0.02</string>
+    <string name="app_3_1_title">Savings</string>
+    <string name="app_3_1_value">Initial Value:</string>
+    <string name="app_3_1_valueEx">Value in $:  500.00</string>
+    <string name="app_3_3_ans1">Bridge ahead</string>
+    <string name="app_3_3_ans2">Road Narrows</string>
+    <string name="app_3_3_next">Next Question</string>
+    <string name="app_3_3_ans4">Vehicle Width Narrows</string>
+    <string name="app_3_3_ans3">Accentuated Slope Zone</string>
+    <string name="app_3_3_quest">Q11 - What is the meaning of this sign?</string>
+    <string name="app_3_3_questNum">Question 11 of 28</string>
+    <string name="app_3_3_title">Traffic Quiz</string>
+    <string name="app_3_4_calc">Calculate Final Bill</string>
+    <string name="app_3_4_couvert">Artistic Couvert $:</string>
+    <string name="app_3_4_divide">Divive bill by:</string>
+    <string name="app_3_4_finalPerson">Value per Person $:</string>
+    <string name="app_3_4_finalTotal">Total Bill $:</string>
+    <string name="app_3_4_tax">Service Tax (10%) $:</string>
+    <string name="app_3_4_value">Total Consumption $:</string>
+    <string name="app_3_1_time">Application Time</string>
+    <string name="app_3_1_timeEx">In months</string>
+    <string name="app_3_1_applic">Mensal Appication</string>
+    <string name="app_3_1_applicEx">Ex: 100.00</string>
+</resources>
