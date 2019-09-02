@@ -8,49 +8,70 @@
     android:background="#000000"
     tools:context=".Main3_2Activity">
 
-    <TableRow>
+    <TableRow
+        android:gravity="center">
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/onibus" />
+            android:src="@drawable/onibus"
+            android:background="#000000"
+            android:layout_margin="5dp"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/aviao" />
+            android:src="@drawable/aviao"
+            android:background="#000000"
+            android:layout_margin="5dp"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/bairros" />
+            android:src="@drawable/bairros"
+            android:background="#000000"
+            android:layout_margin="5dp"/>
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:gravity="center">
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/turismo" />
+            android:src="@drawable/turismo"
+            android:background="#000000"
+            android:layout_margin="5dp"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/telefone" />
+            android:src="@drawable/telefone"
+            android:background="#000000"
+            android:layout_margin="5dp"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/taxi" />
+            android:src="@drawable/taxi"
+            android:background="#000000"
+            android:layout_margin="5dp"/>
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:gravity="center">
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/cultura" />
+            android:src="@drawable/cultura"
+            android:background="#000000"
+            android:layout_margin="5dp"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/feriados" />
+            android:src="@drawable/feriados"
+            android:background="#000000"
+            android:layout_margin="5dp"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/sac"/>
+            android:src="@drawable/sac"
+            android:background="#000000"
+            android:layout_margin="5dp"/>
     </TableRow>
 
 </TableLayout>

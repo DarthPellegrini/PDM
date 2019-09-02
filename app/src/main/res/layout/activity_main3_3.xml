@@ -4,8 +4,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#d7d7d7"
     android:orientation="vertical"
     tools:context=".Main3_3Activity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_3_3_questNum"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/quiz_transito_banner"
+        android:layout_marginLeft="8dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/placa"
+        android:background="#d7d7d7"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_3_3_quest"
+        android:textSize="16dp"
+        android:layout_marginLeft="20dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_3_3_ans1"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:background="#4fc451"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_3_3_ans2"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:background="#4fc451"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_3_3_ans3"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:background="#4fc451"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_3_3_ans4"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:background="#4fc451"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_3_3_next"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:background="#b2b0b3"/>
 
 </LinearLayout>
