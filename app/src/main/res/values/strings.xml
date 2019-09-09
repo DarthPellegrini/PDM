@@ -26,5 +26,6 @@
     <string name="app_3_4_tax">Taxa de Serviço (10%) R$:</string>
     <string name="app_3_4_finalTotal">Conta Total R$:</string>
     <string name="app_3_4_finalPerson">Valor por Pessoa R$:</string>
+    <string name="app_4_contact"><u>Contato</u></string>
 
 </resources>
