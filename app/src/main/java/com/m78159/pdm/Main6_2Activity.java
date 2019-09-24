@@ -20,11 +20,11 @@ public class Main6_2Activity extends AppCompatActivity {
     ListView listView;
     String estados[] = {"Rio Grande do Sul", "Santa Catarina", "Paraná", "São Paulo", "Rio de Janeiro"};
     String cidades[][] = {
-            {"Porto Alegre","Rio Pardo","Santa Cruz do Sul"},
-            {"Florianópolis","Passo de Torres","Vacaria"},
-            {"Curitiba","Ponta Grossa","Cascavél"},
-            {"São Paulo","Guarujá","Campinas"},
-            {"Rio de Janeiro","Teresópolis","Saquarema"}};
+            {"Porto Alegre","Rio Pardo","Santa Cruz do Sul","Pantano Grande","Dom Feliciano"},
+            {"Florianópolis","Passo de Torres","Vacaria","Tubarão","Criciúma"},
+            {"Curitiba","Ponta Grossa","Cascavél","Joinville","Paranaguá"},
+            {"São Paulo","Guarujá","Campinas","Bauru","Araraquara"},
+            {"Rio de Janeiro","Teresópolis","Saquarema","Cabo Frio","Cordeiro"}};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
