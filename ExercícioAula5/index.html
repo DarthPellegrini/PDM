@@ -64,15 +64,273 @@
         }
 
         function getData1() {
-            alert("hello world");
+            $.ajax({
+                url: "http://ghelfer.net/la/weather.json",
+                method: "GET",
+                dataType: "json",
+                success: function(data) {
+                    // exibir dados na tela
+                    // console.log(JSON.stringify(data));
+                    // datetime: "22-Oct-2018 13:44"
+                    // dewpoint: "19.53"
+                    // direction: "NE"
+                    // humidity: "75.93"
+                    // pressure: "1011.81"
+                    // speed: "3.99"
+                    // temperature: "23.95"
+                    let mtemp = 0,
+                        mhum = 0,
+                        morv = 0,
+                        mpre = 0;
+                    data.weather.forEach(function(obj) {
+                        mtemp += parseFloat(obj.temperature);
+                        mhum += parseFloat(obj.humidity);
+                        morv += parseFloat(obj.dewpoint);
+                        mpre += parseFloat(obj.pressure);
+                    });
+                    document.getElementById("dt").innerText = "Data: " + data.weather[0].datetime;
+                    document.getElementById("temp").innerText = "Temperatura: " + data.weather[0].temperature;
+                    document.getElementById("umidade").innerText = "Umidade: " + data.weather[0].humidity;
+                    document.getElementById("orvalho").innerText = "Orvalho: " + data.weather[0].dewpoint;
+                    document.getElementById("pressao").innerText = "Pressão: " + data.weather[0].pressure;
+                    document.getElementById("total").innerText = "Total de registros: " + data.weather.length;
+                    document.getElementById("Mtemp").innerText = "Média de temperatura: " + (mtemp / data.weather.length).toFixed(2);
+                    document.getElementById("Mumidade").innerText = "Média de Umidade: " + (mhum / data.weather.length).toFixed(2);
+                    document.getElementById("Morvalho").innerText = "Média de Orvalho: " + (morv / data.weather.length).toFixed(2);
+                    document.getElementById("Mpressao").innerText = "Média de Pressão: " + (mpre / data.weather.length).toFixed(2);
+                },
+                error: function(xhr, status, errorThrown) {
+                    alert("Ops, aconteceu um problema!")
+                },
+                // complete: function(xhr, status) {
+                //     alert('A requisição está completa!')
+                // }
+            })
         }
 
         function getData2() {
-            alert("goodbye world");
+            $.ajax({
+                url: "http://ghelfer.net/la/weather.json",
+                method: "GET",
+                dataType: "json",
+                success: function(data) {
+                    // exibir dados na tela
+                    // console.log(JSON.stringify(data));
+                    // datetime: "22-Oct-2018 13:44"
+                    // dewpoint: "19.53"
+                    // direction: "NE"
+                    // humidity: "75.93"
+                    // pressure: "1011.81"
+                    // speed: "3.99"
+                    // temperature: "23.95"
+                    let mtemp = 0,
+                        mhum = 0,
+                        morv = 0,
+                        mpre = 0;
+                    data.weather.forEach(function(obj) {
+                        mtemp += parseFloat(obj.temperature);
+                        mhum += parseFloat(obj.humidity);
+                        morv += parseFloat(obj.dewpoint);
+                        mpre += parseFloat(obj.pressure);
+                    });
+                    document.getElementById("dt").innerText = "Data: " + data.weather[0].datetime;
+                    document.getElementById("temp").innerText = "Temperatura: " + data.weather[0].temperature;
+                    document.getElementById("umidade").innerText = "Umidade: " + data.weather[0].humidity;
+                    document.getElementById("orvalho").innerText = "Orvalho: " + data.weather[0].dewpoint;
+                    document.getElementById("pressao").innerText = "Pressão: " + data.weather[0].pressure;
+                    document.getElementById("total").innerText = "Total de registros: " + data.weather.length;
+                    document.getElementById("Mtemp").innerText = "Média de temperatura: " + (mtemp / data.weather.length).toFixed(2);
+                    document.getElementById("Mumidade").innerText = "Média de Umidade: " + (mhum / data.weather.length).toFixed(2);
+                    document.getElementById("Morvalho").innerText = "Média de Orvalho: " + (morv / data.weather.length).toFixed(2);
+                    document.getElementById("Mpressao").innerText = "Média de Pressão: " + (mpre / data.weather.length).toFixed(2);
+                },
+                error: function(xhr, status, errorThrown) {
+                    alert("Ops, aconteceu um problema!")
+                },
+                // complete: function(xhr, status) {
+                //     alert('A requisição está completa!')
+                // }
+            })
         }
 
         function getData3() {
-            alert("test");
+            $.ajax({
+                url: "http://ghelfer.net/la/weather.json",
+                method: "GET",
+                dataType: "json",
+                success: function(data) {
+                    // exibir dados na tela
+                    // console.log(JSON.stringify(data));
+                    // datetime: "22-Oct-2018 13:44"
+                    // dewpoint: "19.53"
+                    // direction: "NE"
+                    // humidity: "75.93"
+                    // pressure: "1011.81"
+                    // speed: "3.99"
+                    // temperature: "23.95"
+                    let mtemp = 0,
+                        mhum = 0,
+                        morv = 0,
+                        mpre = 0;
+                    data.weather.forEach(function(obj) {
+                        mtemp += parseFloat(obj.temperature);
+                        mhum += parseFloat(obj.humidity);
+                        morv += parseFloat(obj.dewpoint);
+                        mpre += parseFloat(obj.pressure);
+                    });
+                    document.getElementById("dt").innerText = "Data: " + data.weather[0].datetime;
+                    document.getElementById("temp").innerText = "Temperatura: " + data.weather[0].temperature;
+                    document.getElementById("umidade").innerText = "Umidade: " + data.weather[0].humidity;
+                    document.getElementById("orvalho").innerText = "Orvalho: " + data.weather[0].dewpoint;
+                    document.getElementById("pressao").innerText = "Pressão: " + data.weather[0].pressure;
+                    document.getElementById("total").innerText = "Total de registros: " + data.weather.length;
+                    document.getElementById("Mtemp").innerText = "Média de temperatura: " + (mtemp / data.weather.length).toFixed(2);
+                    document.getElementById("Mumidade").innerText = "Média de Umidade: " + (mhum / data.weather.length).toFixed(2);
+                    document.getElementById("Morvalho").innerText = "Média de Orvalho: " + (morv / data.weather.length).toFixed(2);
+                    document.getElementById("Mpressao").innerText = "Média de Pressão: " + (mpre / data.weather.length).toFixed(2);
+                },
+                error: function(xhr, status, errorThrown) {
+                    alert("Ops, aconteceu um problema!")
+                },
+                // complete: function(xhr, status) {
+                //     alert('A requisição está completa!')
+                // }
+            })
+        }
+
+        function getData4() {
+            $.ajax({
+                url: "http://ghelfer.net/la/weather.json",
+                method: "GET",
+                dataType: "json",
+                success: function(data) {
+                    // exibir dados na tela
+                    // console.log(JSON.stringify(data));
+                    // datetime: "22-Oct-2018 13:44"
+                    // dewpoint: "19.53"
+                    // direction: "NE"
+                    // humidity: "75.93"
+                    // pressure: "1011.81"
+                    // speed: "3.99"
+                    // temperature: "23.95"
+                    let mtemp = 0,
+                        mhum = 0,
+                        morv = 0,
+                        mpre = 0;
+                    data.weather.forEach(function(obj) {
+                        mtemp += parseFloat(obj.temperature);
+                        mhum += parseFloat(obj.humidity);
+                        morv += parseFloat(obj.dewpoint);
+                        mpre += parseFloat(obj.pressure);
+                    });
+                    document.getElementById("dt").innerText = "Data: " + data.weather[0].datetime;
+                    document.getElementById("temp").innerText = "Temperatura: " + data.weather[0].temperature;
+                    document.getElementById("umidade").innerText = "Umidade: " + data.weather[0].humidity;
+                    document.getElementById("orvalho").innerText = "Orvalho: " + data.weather[0].dewpoint;
+                    document.getElementById("pressao").innerText = "Pressão: " + data.weather[0].pressure;
+                    document.getElementById("total").innerText = "Total de registros: " + data.weather.length;
+                    document.getElementById("Mtemp").innerText = "Média de temperatura: " + (mtemp / data.weather.length).toFixed(2);
+                    document.getElementById("Mumidade").innerText = "Média de Umidade: " + (mhum / data.weather.length).toFixed(2);
+                    document.getElementById("Morvalho").innerText = "Média de Orvalho: " + (morv / data.weather.length).toFixed(2);
+                    document.getElementById("Mpressao").innerText = "Média de Pressão: " + (mpre / data.weather.length).toFixed(2);
+                },
+                error: function(xhr, status, errorThrown) {
+                    alert("Ops, aconteceu um problema!")
+                },
+                // complete: function(xhr, status) {
+                //     alert('A requisição está completa!')
+                // }
+            })
+        }
+
+        function getData5() {
+            $.ajax({
+                url: "http://ghelfer.net/la/weather.json",
+                method: "GET",
+                dataType: "json",
+                success: function(data) {
+                    // exibir dados na tela
+                    // console.log(JSON.stringify(data));
+                    // datetime: "22-Oct-2018 13:44"
+                    // dewpoint: "19.53"
+                    // direction: "NE"
+                    // humidity: "75.93"
+                    // pressure: "1011.81"
+                    // speed: "3.99"
+                    // temperature: "23.95"
+                    let mtemp = 0,
+                        mhum = 0,
+                        morv = 0,
+                        mpre = 0;
+                    data.weather.forEach(function(obj) {
+                        mtemp += parseFloat(obj.temperature);
+                        mhum += parseFloat(obj.humidity);
+                        morv += parseFloat(obj.dewpoint);
+                        mpre += parseFloat(obj.pressure);
+                    });
+                    document.getElementById("dt").innerText = "Data: " + data.weather[0].datetime;
+                    document.getElementById("temp").innerText = "Temperatura: " + data.weather[0].temperature;
+                    document.getElementById("umidade").innerText = "Umidade: " + data.weather[0].humidity;
+                    document.getElementById("orvalho").innerText = "Orvalho: " + data.weather[0].dewpoint;
+                    document.getElementById("pressao").innerText = "Pressão: " + data.weather[0].pressure;
+                    document.getElementById("total").innerText = "Total de registros: " + data.weather.length;
+                    document.getElementById("Mtemp").innerText = "Média de temperatura: " + (mtemp / data.weather.length).toFixed(2);
+                    document.getElementById("Mumidade").innerText = "Média de Umidade: " + (mhum / data.weather.length).toFixed(2);
+                    document.getElementById("Morvalho").innerText = "Média de Orvalho: " + (morv / data.weather.length).toFixed(2);
+                    document.getElementById("Mpressao").innerText = "Média de Pressão: " + (mpre / data.weather.length).toFixed(2);
+                },
+                error: function(xhr, status, errorThrown) {
+                    alert("Ops, aconteceu um problema!")
+                },
+                // complete: function(xhr, status) {
+                //     alert('A requisição está completa!')
+                // }
+            })
+        }
+
+        function getData6() {
+            $.ajax({
+                url: "http://ghelfer.net/la/weather.json",
+                method: "GET",
+                dataType: "json",
+                success: function(data) {
+                    // exibir dados na tela
+                    // console.log(JSON.stringify(data));
+                    // datetime: "22-Oct-2018 13:44"
+                    // dewpoint: "19.53"
+                    // direction: "NE"
+                    // humidity: "75.93"
+                    // pressure: "1011.81"
+                    // speed: "3.99"
+                    // temperature: "23.95"
+                    let mtemp = 0,
+                        mhum = 0,
+                        morv = 0,
+                        mpre = 0;
+                    data.weather.forEach(function(obj) {
+                        mtemp += parseFloat(obj.temperature);
+                        mhum += parseFloat(obj.humidity);
+                        morv += parseFloat(obj.dewpoint);
+                        mpre += parseFloat(obj.pressure);
+                    });
+                    document.getElementById("dt").innerText = "Data: " + data.weather[0].datetime;
+                    document.getElementById("temp").innerText = "Temperatura: " + data.weather[0].temperature;
+                    document.getElementById("umidade").innerText = "Umidade: " + data.weather[0].humidity;
+                    document.getElementById("orvalho").innerText = "Orvalho: " + data.weather[0].dewpoint;
+                    document.getElementById("pressao").innerText = "Pressão: " + data.weather[0].pressure;
+                    document.getElementById("total").innerText = "Total de registros: " + data.weather.length;
+                    document.getElementById("Mtemp").innerText = "Média de temperatura: " + (mtemp / data.weather.length).toFixed(2);
+                    document.getElementById("Mumidade").innerText = "Média de Umidade: " + (mhum / data.weather.length).toFixed(2);
+                    document.getElementById("Morvalho").innerText = "Média de Orvalho: " + (morv / data.weather.length).toFixed(2);
+                    document.getElementById("Mpressao").innerText = "Média de Pressão: " + (mpre / data.weather.length).toFixed(2);
+                },
+                error: function(xhr, status, errorThrown) {
+                    alert("Ops, aconteceu um problema!")
+                },
+                // complete: function(xhr, status) {
+                //     alert('A requisição está completa!')
+                // }
+            })
         }
     </script>
 </head>

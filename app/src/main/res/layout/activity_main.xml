@@ -34,7 +34,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="AULA 5 - feita fora do App" />
+        android:text="@string/aula_5" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="aula6Click"
+        android:text="@string/aula_6" />
 
 </LinearLayout>
