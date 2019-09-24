@@ -52,5 +52,8 @@ public class Main6_2Activity extends AppCompatActivity {
 
         });
         listView.setEmptyView(findViewById(R.id.listviewCidadeEmpty));
+        ArrayAdapter<String> adapter_lst =
+                new ArrayAdapter<>(getApplicationContext(), R.layout.list_layout, R.id.textViewList, cities[0]);
+        listView.setAdapter(adapter_lst);
     }
 }
