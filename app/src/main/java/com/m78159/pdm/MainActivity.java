@@ -38,6 +38,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void aula5Click(View view) {
+        Intent intent = new Intent(getApplicationContext(),Main5Activity.class);
+        startActivity(intent);
+
+    }
+
     public void aula6Click(View view) {
         Intent intent = new Intent(getApplicationContext(),Main6Activity.class);
         startActivity(intent);

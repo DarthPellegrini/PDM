@@ -11,30 +11,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="aula1Click"
-        android:text="AULA 1" />
+        android:text="@string/aula_1" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="aula2Click"
-        android:text="AULA 2" />
+        android:text="@string/aula_2" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="aula3Click"
-        android:text="AULA 3" />
+        android:text="@string/aula_3" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="aula4Click"
-        android:text="AULA 4" />
+        android:text="@string/aula_4" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/aula_5" />
+        android:text="@string/aula_5"
+        android:onClick="aula5Click"/>
 
     <Button
         android:layout_width="match_parent"

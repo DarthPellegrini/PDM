@@ -28,7 +28,11 @@
     <string name="app_3_4_finalPerson">Valor por Pessoa R$:</string>
     <string name="app_4_contact"><u>Contato</u></string>
     <string name="aula_6">AULA 6</string>
-    <string name="aula_5">AULA 5 - feita fora do App</string>
+    <string name="aula_5">AULA 5</string>
+    <string name="aula_4">AULA 4</string>
+    <string name="aula_3">AULA 3</string>
+    <string name="aula_2">AULA 2</string>
+    <string name="aula_1">AULA 1</string>
 
     <string-array name="categoria_gasto">
         <item>Alimentação</item>

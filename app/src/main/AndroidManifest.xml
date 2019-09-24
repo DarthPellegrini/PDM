@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/androidos"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main6_2Activity"/>
+        <activity android:name=".Main5Activity"></activity>
+        <activity android:name=".Main6_2Activity" />
         <activity android:name=".Main6_1Activity" />
         <activity android:name=".Main6Activity" />
         <activity android:name=".Main1Activity" />
