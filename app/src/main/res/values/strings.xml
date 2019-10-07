@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PDM</string>
+    <string name="app_name" translatable="false">PDM</string>
     <string name="app_3_1_title">Poupança</string>
     <string name="app_3_1_value">Valor Inicial:</string>
     <string name="app_3_1_valueEx">Valor em R$: Ex: 1700,00</string>
@@ -27,12 +27,13 @@
     <string name="app_3_4_finalTotal">Conta Total R$:</string>
     <string name="app_3_4_finalPerson">Valor por Pessoa R$:</string>
     <string name="app_4_contact"><u>Contato</u></string>
-    <string name="aula_6">AULA 6</string>
-    <string name="aula_5">AULA 5</string>
-    <string name="aula_4">AULA 4</string>
-    <string name="aula_3">AULA 3</string>
-    <string name="aula_2">AULA 2</string>
-    <string name="aula_1">AULA 1</string>
+    <string name="aula_6" translatable="false">AULA 6</string>
+    <string name="aula_5" translatable="false">AULA 5</string>
+    <string name="aula_4" translatable="false">AULA 4</string>
+    <string name="aula_3" translatable="false">AULA 3</string>
+    <string name="aula_2" translatable="false">AULA 2</string>
+    <string name="aula_1" translatable="false">AULA 1</string>
+    <string name="aula_7" translatable="false">AULA 7</string>
 
     <string-array name="categoria_gasto">
         <item>Alimentação</item>
@@ -41,4 +42,8 @@
         <item>Hospedagem</item>
         <item>Outros</item>
     </string-array>
+    <string name="title_activity_main7_1_adapter" translatable="false">Main7_1ActivityAdapter</string>
+    <string name="adapter_de_times" translatable="false">Adapter de Times</string>
+    <string name="adapter_de_cores" translatable="false">Adapter de Cores</string>
+    <string name="logo">logo</string>
 </resources>

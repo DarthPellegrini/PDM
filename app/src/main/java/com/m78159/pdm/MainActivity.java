@@ -50,4 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void aula7Click(View view) {
+        Intent intent = new Intent(getApplicationContext(),Main7Activity.class);
+        startActivity(intent);
+
+    }
+
 }
