@@ -13,16 +13,18 @@ public class Main7_2ActivityAdapter extends ArrayAdapter {
 
     private String[] colorNames;
     private int[] colors;
+    private int textViewResourceId;
 
     protected Main7_2ActivityAdapter(Context context, int textViewResourceId, String[] objects, int[] colors) {
         super(context, textViewResourceId, objects);
+        this.textViewResourceId = textViewResourceId;
         this.colorNames = objects;
         this.colors = colors;
     }
 
     private View getCustomView(int position, View convertView, ViewGroup parent){
         LayoutInflater layoutInflater = ((Activity)super.getContext()).getLayoutInflater();
-        View row = layoutInflater.inflate (R.layout.activity_main7_2_adapter, parent, false);
+        View row = layoutInflater.inflate (this.textViewResourceId, parent, false);
 
         TextView tv1 = (TextView) row.findViewById (R.id.colorSpinnerTextView);
         tv1.setText(colorNames[position]);
