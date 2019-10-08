@@ -17,7 +17,7 @@ public class Main7_1Activity extends ListActivity implements AdapterView.OnItemC
     private int[] views = {R.id.logoTime, R.id.nomeTime, R.id.pontosTime};
 
     //Dados da lista
-    private List<HashMap<String,Object>> lista;
+    private List<HashMap<String,Object>> list;
     private String[] clubes = {"Grêmio","Internacional","São Paulo","Palmeiras","Flamengo","Atlético-MG","Cruzeiro","Santos","Fluminense","Corinthians","América-MG","Vitória","Bahia","Atlético-PR","Botafogo","Vasco","Sport","Ceará","Chapecoense","Paraná Clube"};
     private int[] pontos = {49,49,46,44,41,38,33,31,31,30,30,29,28,27,26,24,24,24,22,16};
     private int[] logos = {R.drawable.gre, R.drawable.inter, R.drawable.sao, R.drawable.pal, R.drawable.fla, R.drawable.cam, R.drawable.cru, R.drawable.san, R.drawable.flu, R.drawable.cor, R.drawable.ame, R.drawable.vit, R.drawable.bah, R.drawable.cap, R.drawable.bot, R.drawable.vas, R.drawable.spt, R.drawable.cea, R.drawable.cha, R.drawable.par};
@@ -33,21 +33,21 @@ public class Main7_1Activity extends ListActivity implements AdapterView.OnItemC
     }
 
     private List<HashMap<String,Object>> dadosTabela() {
-        lista = new ArrayList<>();
-        HashMap<String, Object> itens;
+        list = new ArrayList<>();
+        HashMap<String, Object> items;
         for (int i = 0; i < clubes.length; i++){
-            itens = new HashMap<>();
-            itens.put(labels[0],logos[i]);
-            itens.put(labels[1],clubes[i]);
-            itens.put(labels[2],pontos[i]);
-            lista.add(itens);
+            items = new HashMap<>();
+            items.put(labels[0],logos[i]);
+            items.put(labels[1],clubes[i]);
+            items.put(labels[2],pontos[i]);
+            list.add(items);
         }
-        return lista;
+        return list;
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-        HashMap<String, Object> item = lista.get(position);
+        HashMap<String, Object> item = list.get(position);
         Toast.makeText(getApplicationContext(),
                         "Time: " + item.get(labels[1]) +
                         "\nPontuação: " + item.get(labels[2]) ,
