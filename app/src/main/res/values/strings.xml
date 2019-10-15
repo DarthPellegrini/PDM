@@ -45,5 +45,6 @@
     <string name="title_activity_main7_1_adapter" translatable="false">Main7_1ActivityAdapter</string>
     <string name="adapter_de_times" translatable="false">Adapter de Times</string>
     <string name="adapter_de_cores" translatable="false">Adapter de Cores</string>
-    <string name="logo">logo</string>
+    <string name="logo" translatable="false">logo</string>
+    <string name="aula_8" translatable="false">AULA 8</string>
 </resources>
