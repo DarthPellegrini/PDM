@@ -7,42 +7,33 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 public class Main8Activity extends AppCompatActivity {
 
     private final int TIRAR_FOTO = 0;
     private Spinner spinnerEstado;
     private Spinner spinnerCidade;
-    private ListView listAlunos;
-    private Button capturar;
     private TextView matricula;
     private TextView nome;
     private TextView email;
     private ImageView captura;
-    private Button adicionar;
     private Main8ActivityAdapter adapter;
     private ArrayList<Map<String,Object>> memory = new ArrayList<>();
 
@@ -64,9 +55,7 @@ public class Main8Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main8);
 
-        listAlunos = findViewById(R.id.listMatriculas);
-        capturar = findViewById(R.id.revisaoCapturar);
-        adicionar = findViewById(R.id.revisaoAdicionar);
+        ListView listAlunos = findViewById(R.id.listMatriculas);
         spinnerEstado = findViewById(R.id.revisaoEstado);
         spinnerCidade = findViewById(R.id.revisaoCidade);
         matricula = findViewById(R.id.revisaoMatricula);
@@ -95,7 +84,7 @@ public class Main8Activity extends AppCompatActivity {
                 R.layout.activity_main8_adapter,
                 labels, views);
         listAlunos.setAdapter(adapter);
-        listAlunos.setOnItemClickListener( new AdapterView.OnItemClickListener(){
+        listAlunos.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Map<String,Object> item = memory.get(position);
                 Intent intent = new Intent(getApplicationContext(), Main8_1Activity.class);
@@ -132,11 +121,12 @@ public class Main8Activity extends AppCompatActivity {
     }
 
     @Override
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == TIRAR_FOTO && resultCode == RESULT_OK) {
             ImageView iv = findViewById(R.id.revisaoFotoCapturada);
-            iv.setImageBitmap((Bitmap) data.getExtras().get("data"));
+            iv.setImageBitmap((Bitmap) Objects.requireNonNull(data.getExtras()).get("data"));
             iv.setScaleType(ImageView.ScaleType.FIT_XY);
         }
 
