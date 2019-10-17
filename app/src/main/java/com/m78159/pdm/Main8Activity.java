@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +29,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main8Activity extends AppCompatActivity {
 
@@ -40,12 +43,12 @@ public class Main8Activity extends AppCompatActivity {
     private TextView email;
     private ImageView captura;
     private Button adicionar;
-    private ArrayList<ArrayList<Object>> memory = new ArrayList<>();
+    private Main8ActivityAdapter adapter;
+    private ArrayList<Map<String,Object>> memory = new ArrayList<>();
 
     //Labels e views
     private String[] labels = {"foto", "matricula", "nome"};
     private int[] views = {R.id.revisaoFotoLista, R.id.revisaoMatriculaLista, R.id.revisaoNomeLista};
-    private List<HashMap<String,Object>> list;
 
     final String[] estates = {"Selecione o Estado","Rio Grande do Sul", "Santa Catarina", "Paraná", "São Paulo", "Rio de Janeiro"};
     final String[][] cities = {
@@ -61,15 +64,15 @@ public class Main8Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main8);
 
-        spinnerEstado = findViewById(R.id.revisaoEstado);
-        spinnerCidade = findViewById(R.id.revisaoCidade);
         listAlunos = findViewById(R.id.listMatriculas);
         capturar = findViewById(R.id.revisaoCapturar);
+        adicionar = findViewById(R.id.revisaoAdicionar);
+        spinnerEstado = findViewById(R.id.revisaoEstado);
+        spinnerCidade = findViewById(R.id.revisaoCidade);
         matricula = findViewById(R.id.revisaoMatricula);
         nome = findViewById(R.id.revisaoNome);
         email = findViewById(R.id.revisaoEmail);
         captura = findViewById(R.id.revisaoFotoCapturada);
-        adicionar = findViewById(R.id.revisaoAdicionar);
 
         ArrayAdapter<String> adapter_sp = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, estates);
         spinnerEstado.setAdapter(adapter_sp);
@@ -87,15 +90,21 @@ public class Main8Activity extends AppCompatActivity {
             }
         });
 
-        Main8ActivityAdapter adapter =new Main8ActivityAdapter(this,
-                dados(),
+        adapter = new Main8ActivityAdapter(this,
+                memory,
                 R.layout.activity_main8_adapter,
-                labels, views, memory.toArray());
+                labels, views);
         listAlunos.setAdapter(adapter);
         listAlunos.setOnItemClickListener( new AdapterView.OnItemClickListener(){
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                HashMap<String, Object> item = list.get(position);
-                //abre nova activity e passa os dados do item selecionado
+                Map<String,Object> item = memory.get(position);
+                Intent intent = new Intent(getApplicationContext(), Main8_1Activity.class);
+                intent.putExtra("matricula", (String) item.get("matricula"));
+                intent.putExtra("nome", (String) item.get("nome"));
+                intent.putExtra("email", (String) item.get("email"));
+                intent.putExtra("estado", (String) item.get("estado"));
+                intent.putExtra("cidade", (String) item.get("cidade"));
+                startActivity(intent);
             }
         });
 
@@ -128,26 +137,22 @@ public class Main8Activity extends AppCompatActivity {
         if (requestCode == TIRAR_FOTO && resultCode == RESULT_OK) {
             ImageView iv = findViewById(R.id.revisaoFotoCapturada);
             iv.setImageBitmap((Bitmap) data.getExtras().get("data"));
+            iv.setScaleType(ImageView.ScaleType.FIT_XY);
         }
 
     }
 
     public void addAluno(View view){
-        ArrayList<Object> dados = new ArrayList<>();
-        dados.add(matricula);
-        dados.add(nome);
-        dados.add(email);
-        dados.add(spinnerEstado.getSelectedItem());
-        dados.add(spinnerCidade.getSelectedItem());
-        dados.add(captura);
+        final Map<String,Object> dados = new HashMap<>();
+        dados.put("matricula",matricula.getText().toString());
+        dados.put("nome",nome.getText().toString());
+        dados.put("email",email.getText().toString());
+        dados.put("estado",spinnerEstado.getSelectedItem());
+        dados.put("cidade",spinnerCidade.getSelectedItem());
+        BitmapDrawable bd = (BitmapDrawable)captura.getDrawable();
+        dados.put("foto",bd.getBitmap());
         memory.add(dados);
+        adapter.notifyDataSetChanged();
     }
-
-    private List<HashMap<String,Object>> dados() {
-        list = new ArrayList<>();
-        list.add(new HashMap<String, Object>());
-        return list;
-    }
-
 
 }

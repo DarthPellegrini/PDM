@@ -155,16 +155,13 @@
         android:onClick="addAluno"
         android:layout_marginBottom="20dp"
         android:layout_gravity="center_horizontal"/>
-    
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
         <ListView
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="20dp"
             android:id="@+id/listMatriculas"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </ListView>
-    </ScrollView>
-    
+            android:layout_height="wrap_content"/>
+
 
 </LinearLayout>
