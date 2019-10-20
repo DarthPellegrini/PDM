@@ -62,4 +62,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void aula9Click(View view) {
+        Intent intent = new Intent(getApplicationContext(),Main9Activity.class);
+        startActivity(intent);
+
+    }
+
 }

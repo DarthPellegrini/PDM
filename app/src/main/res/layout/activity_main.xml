@@ -54,4 +54,9 @@
         android:onClick="aula8Click"
         android:text="@string/aula_8" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="aula9Click"
+        android:text="@string/aula_9_prova_trabalho" />
 </LinearLayout>
