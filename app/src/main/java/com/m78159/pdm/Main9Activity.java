@@ -24,12 +24,9 @@ public class Main9Activity extends AppCompatActivity {
     private Spinner operacao;
     private Main9_1ActivityAdapter adapter;
     private final String[] operacoes = {"+", "-", "*", "/"};
-    private ExpandableListView list;
     private Map<String,String> lista_operacoes;
     // lista de headers com as datas
     private List<String> headers;
-    // lista de dados
-    private List<Main9_2ActivityDados> listData;
     /*
      * Map com:
      * TimeStamp do header como key
@@ -47,10 +44,9 @@ public class Main9Activity extends AppCompatActivity {
         valor2 = findViewById(R.id.aula9_valor2);
         resultado = findViewById(R.id.aula9_resultado);
         operacao = findViewById(R.id.spinner_operacao);
-        list = findViewById(R.id.expandable_list);
+        ExpandableListView list = findViewById(R.id.expandable_list);
 
         headers = new ArrayList<>();
-        listData = new ArrayList<>();
         data = new HashMap<>();
 
         lista_operacoes = new HashMap<>();
