@@ -7,32 +7,29 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Main9_1ActivityAdapter extends BaseExpandableListAdapter {
 
-    Context context;
-    List<String> headers;
-    Map<String,Double> headerData;
-    Map<String,Map<String,Object>> childData;
+    private Context context;
+    private List<String> headers;
+    private Map<String,Main9_2ActivityDados> data;
 
-    public Main9_1ActivityAdapter(Context context, List<String> headers, Map<String,Double> headerData, Map<String,Map<String,Object>> childData){
+    protected Main9_1ActivityAdapter(Context context, List<String> headers, Map<String,Main9_2ActivityDados> data){
         this.context = context;
         this.headers = headers;
-        this.headerData = headerData;
-        this.childData = childData;
+        this.data = data;
     }
 
     @Override
     public int getGroupCount() {
-        return headerData.size();
+        return headers.size();
     }
 
     @Override
     public int getChildrenCount(int i) {
-        return childData.get(headers.get(i)).size();
+        return 1;
     }
 
     @Override
@@ -41,8 +38,8 @@ public class Main9_1ActivityAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public Map<String,Object> getChild(int i, int i1) {
-        return childData.get(headers.get(i));
+    public Main9_2ActivityDados getChild(int i, int i1) {
+        return data.get(headers.get(i));
     }
 
     @Override
@@ -69,8 +66,8 @@ public class Main9_1ActivityAdapter extends BaseExpandableListAdapter {
         TextView date = view.findViewById(R.id.aula9_header_timestamp);
         TextView result = view.findViewById(R.id.aula9_header_resultado);
 
-        date.setText("Data/hora = " + headers.get(i));
-        result.setText("Resultado = " + headerData.get(headers.get(i)));
+        date.setText(String.format("Data/hora = %s", this.getGroup(i)));
+        result.setText(String.format("Resultado = %s", this.getChild(i,0).getResultado()));
 
         return view;
     }
@@ -82,15 +79,12 @@ public class Main9_1ActivityAdapter extends BaseExpandableListAdapter {
                     .inflate(R.layout.activity_main9_expandable_list_child, null);
         }
 
-        TextView valor1 = view.findViewById(R.id.aula9_child_valor1);
-        TextView valor2 = view.findViewById(R.id.aula9_child_valor2);
+        TextView valores = view.findViewById(R.id.aula9_child_valores);
         TextView operacao = view.findViewById(R.id.aula9_child_operacao);
 
-        Map<String,Object> dados = childData.get(headers.get(i));
-
-        valor1.setText("Valor 1 = " + dados.get("valor1"));
-        valor2.setText("Valor 2 = " + dados.get("valor2"));
-        operacao.setText("Operação = " + dados.get("operacao"));
+        valores.setText(String.format("Valor 1 = %s      Valor 2 = %s",
+                this.getChild(i, i1).getValor1(), this.getChild(i, i1).getValor2()));
+        operacao.setText(String.format("Operação = %s", this.getChild(i, i1).getOperacao()));
 
         return view;
     }

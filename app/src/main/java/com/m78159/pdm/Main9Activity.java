@@ -2,6 +2,7 @@ package com.m78159.pdm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -21,20 +22,20 @@ public class Main9Activity extends AppCompatActivity {
     private EditText valor2;
     private EditText resultado;
     private Spinner operacao;
-    private ExpandableListView list;
     private Main9_1ActivityAdapter adapter;
     private final String[] operacoes = {"+", "-", "*", "/"};
+    private ExpandableListView list;
     private Map<String,String> lista_operacoes;
     // lista de headers com as datas
     private List<String> headers;
-    // map com data e resultado
-    private Map<String,Double> headerData;
+    // lista de dados
+    private List<Main9_2ActivityDados> listData;
     /*
      * Map com:
      * TimeStamp do header como key
-     * HashMap dos dados da criança como value
+     * Classe de dados como value
      */
-    private Map<String,Map<String,Object>> childData;
+    private Map<String,Main9_2ActivityDados> data;
 
 
     @Override
@@ -49,8 +50,8 @@ public class Main9Activity extends AppCompatActivity {
         list = findViewById(R.id.expandable_list);
 
         headers = new ArrayList<>();
-        headerData = new HashMap<>();
-        childData = new HashMap<>();
+        listData = new ArrayList<>();
+        data = new HashMap<>();
 
         lista_operacoes = new HashMap<>();
         lista_operacoes.put(operacoes[0],"Adição");
@@ -58,14 +59,14 @@ public class Main9Activity extends AppCompatActivity {
         lista_operacoes.put(operacoes[2],"Multiplicação");
         lista_operacoes.put(operacoes[3],"Divisão");
 
-        adapter = new Main9_1ActivityAdapter(this.getApplicationContext(),headers,headerData,childData);
+        adapter = new Main9_1ActivityAdapter(this.getApplicationContext(),headers,data);
         list.setAdapter(adapter);
     }
 
 
     public final void aula9Calcular(View view){
-        String date = new SimpleDateFormat("dd/MM/yyyy HH:mm").format(Calendar.getInstance().getTime());
-        Double result = 0.0;
+        @SuppressLint("SimpleDateFormat") String date = new SimpleDateFormat("dd/MM/yyyy HH:mm").format(Calendar.getInstance().getTime());
+        double result = 0.0;
 
         switch(operacao.getSelectedItem().toString()){
             case "+":
@@ -78,22 +79,20 @@ public class Main9Activity extends AppCompatActivity {
                 result = Double.parseDouble(valor1.getText().toString()) * Double.parseDouble(valor2.getText().toString());
                 break;
             case "/":
-                try {
-                    result = Double.parseDouble(valor1.getText().toString()) / Double.parseDouble(valor2.getText().toString());
-                }catch(Exception e){
-                    return;
-                }
+                result = Double.parseDouble(valor1.getText().toString()) / Double.parseDouble(valor2.getText().toString());
                 break;
         }
         resultado.setText(String.valueOf(result));
-        headers.add(date);
-        headerData.put(date,result);
 
-        Map<String,Object> data = new HashMap<>();
-        data.put("valor1",Double.parseDouble(valor1.getText().toString()));
-        data.put("valor2", Double.parseDouble(valor2.getText().toString()));
-        data.put("operacao",lista_operacoes.get(operacao.getSelectedItem().toString()));
-        childData.put(date,data);
+        if(!headers.contains(date))
+            headers.add(date);
+
+        data.put(date,new Main9_2ActivityDados(
+                date,
+                Double.parseDouble(valor1.getText().toString()),
+                Double.parseDouble(valor2.getText().toString()),
+                result,
+                lista_operacoes.get(operacao.getSelectedItem().toString())));
 
         adapter.notifyDataSetChanged();
     }
