@@ -47,7 +47,9 @@
     <string name="adapter_de_cores" translatable="false">Adapter de Cores</string>
     <string name="logo" translatable="false">logo</string>
     <string name="aula_8" translatable="false">AULA 8 - Desafio Lista Dinâmica</string>
-    <string name="aula_9_prova_trabalho" translatable="false">AULA 9 - Prova/Trabalho</string>
+    <string name="aula_9_prova_trabalho" translatable="false">AULA 9 - Trabalho em dupla</string>
+    <string name="calcular" translatable="false">Calcular</string>
+    <string name="express_o" translatable="false">Expressão:</string>
     <string-array name="categoria_operacao">
         <item>+</item>
         <item>-</item>

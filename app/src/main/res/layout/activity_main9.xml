@@ -5,14 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Main9Activity"
-    android:layout_marginVertical="20dp"
-    android:layout_marginHorizontal="20dp">
+    tools:context=".Main9Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginHorizontal="20dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Expressão:"
+        android:text="@string/express_o"
         android:textSize="15sp"/>
 
     <LinearLayout
@@ -43,7 +49,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calcular"
+        android:text="@string/calcular"
         android:onClick="aula9Calcular"/>
 
     <LinearLayout
@@ -68,10 +74,21 @@
     <ExpandableListView
         android:id="@+id/expandable_list"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
         android:divider="#000000"
         android:dividerHeight="1dp"
         />
+
+</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="-60dp"
+        android:text="Activity Desenvolvida por:\nFernando da Costa Kudrna (78181)\nLeonardo Pellegrini Silva (78159)"
+        android:textColor="#222222" />
 
 </LinearLayout>
