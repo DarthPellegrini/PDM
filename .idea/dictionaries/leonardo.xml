@@ -18,7 +18,10 @@
       <w>contatos</w>
       <w>cruzeiro</w>
       <w>dados</w>
+      <w>datahora</w>
       <w>desenvolvida</w>
+      <w>dewpoint</w>
+      <w>direcao</w>
       <w>divisão</w>
       <w>estado</w>
       <w>expressão</w>
@@ -26,28 +29,37 @@
       <w>fluminense</w>
       <w>foto</w>
       <w>grêmio</w>
+      <w>humidade</w>
       <w>internacional</w>
       <w>lista</w>
       <w>logotipo</w>
       <w>matricula</w>
       <w>matrícula</w>
+      <w>medicoes</w>
       <w>multiplicação</w>
+      <w>médias</w>
       <w>operacao</w>
       <w>operacoes</w>
       <w>operação</w>
+      <w>orvalho</w>
       <w>palmeiras</w>
       <w>pontos</w>
       <w>pontuacao</w>
+      <w>pressao</w>
+      <w>pressão</w>
       <w>prova</w>
       <w>resultado</w>
       <w>revisao</w>
       <w>subtração</w>
+      <w>temperatura</w>
       <w>tirar</w>
       <w>tmat</w>
       <w>tnome</w>
       <w>trabalho</w>
       <w>valores</w>
       <w>vasco</w>
+      <w>velocidade</w>
+      <w>vento</w>
       <w>vitória</w>
     </words>
   </dictionary>

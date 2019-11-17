@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    android:orientation="vertical"
+    tools:context=".Main10Activity">
+
+
+    <TextView
+        android:id="@+id/mediaWebService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aula10_mediaDefaultMessage"/>
+
+
+    <ListView
+        android:id="@+id/listWebService"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#000000"
+        android:dividerHeight="1dp"/>
+
+
+</LinearLayout>

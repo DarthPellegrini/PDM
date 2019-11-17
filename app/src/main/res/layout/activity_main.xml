@@ -58,5 +58,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="aula9Click"
-        android:text="@string/aula_9_prova_trabalho" />
+        android:text="@string/aula_9" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="aula10Click"
+        android:text="@string/aula_10" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="aula11Click"
+        android:enabled="false"
+        android:text="@string/aula_11" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="aula12Click"
+        android:enabled="false"
+        android:text="@string/aula_12" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="Desenvolvido por:\nLeonardo Pellegrini Silva"
+        android:textColor="#222222" />
+
 </LinearLayout>

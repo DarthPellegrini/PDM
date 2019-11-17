@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/aula10_lista_temperatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aula10_lista_temperatura"/>
+    <TextView
+        android:id="@+id/aula10_lista_humidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aula10_lista_humidade"/>
+    <TextView
+        android:id="@+id/aula10_lista_orvalho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aula10_lista_orvalho"/>
+    <TextView
+        android:id="@+id/aula10_lista_pressao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aula10_lista_press_o"/>
+    <TextView
+        android:id="@+id/aula10_lista_velocidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aula10_lista_velocidade_do_vento"/>
+    <TextView
+        android:id="@+id/aula10_lista_direcao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aula10_lista_dire_o_do_vento"/>
+    <TextView
+        android:id="@+id/aula10_lista_datahora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aula10_lista_data_hora"/>
+
+</LinearLayout>
