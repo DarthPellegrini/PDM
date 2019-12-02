@@ -51,7 +51,6 @@ public class Main11Activity extends AppCompatActivity {
                 String idDados = String.valueOf(carros.get(i).get("id"));
                 Intent intent = new Intent(Main11Activity.this, Main11_3ActivityUpdateAndDelete.class);
                 intent.putExtra("idDados", idDados);
-                carros = new ArrayList<>();
                 startActivity(intent);
             }
         });
@@ -82,8 +81,8 @@ public class Main11Activity extends AppCompatActivity {
 
     public void aula11OpenCreateActivity(View view){
         Intent intent = new Intent(getApplicationContext(),Main11_2ActivityCreate.class);
-        carros = new ArrayList<>();
         startActivity(intent);
+
     }
 
     @Override
@@ -91,4 +90,11 @@ public class Main11Activity extends AppCompatActivity {
         helper.close();
         super.onDestroy();
     }
+
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        this.recreate();
+    }
+
 }

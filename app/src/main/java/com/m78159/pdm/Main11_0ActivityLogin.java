@@ -48,7 +48,6 @@ public class Main11_0ActivityLogin extends AppCompatActivity {
                 startActivity(intent);
             }else {
                 Toast.makeText(this, "Usuário ou senha inválidos", Toast.LENGTH_SHORT).show();
-                return;
             }
         }
 

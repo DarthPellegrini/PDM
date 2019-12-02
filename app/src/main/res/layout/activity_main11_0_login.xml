@@ -23,15 +23,14 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="usuário"
-            />
+            android:hint="@string/usuario" />
 
         <EditText
             android:id="@+id/aula11_pass"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="senha"
+            android:hint="@string/senha"
             />
         <Button
             android:id="@+id/aula11_LoginBtn"
@@ -59,7 +58,7 @@
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@id/aula11_sessao"
         android:layout_toRightOf="@id/aula11_sessao"
-        android:text="0"
+        android:text="@string/_0"
         />
 
 </RelativeLayout>

@@ -71,6 +71,9 @@
     <string name="atualizar" translatable="false">Atualizar</string>
     <string name="sess_es" translatable="false">Sessões: </string>
     <string name="entrar" translatable="false">Entrar</string>
+    <string name="senha" translatable="false">senha</string>
+    <string name="usuario" translatable="false">usuário</string>
+    <string name="_0" translatable="false">0</string>
     <string-array name="categoria_operacao">
         <item>+</item>
         <item>-</item>
