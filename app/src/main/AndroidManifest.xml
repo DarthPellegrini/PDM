@@ -16,7 +16,12 @@
         android:roundIcon="@mipmap/androidos"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main10Activity"></activity>
+        <activity android:name=".Main11_0ActivityLogin"></activity>
+        <activity android:name=".Main11_3ActivityUpdateAndDelete" />
+        <activity android:name=".Main11_2ActivityCreate" />
+        <activity android:name=".Main12Activity" />
+        <activity android:name=".Main11Activity" />
+        <activity android:name=".Main10Activity" />
         <activity android:name=".Main9Activity" />
         <activity android:name=".Main8_1Activity" />
         <activity android:name=".Main8Activity" />

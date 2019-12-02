@@ -61,6 +61,16 @@
     <string name="aula10_lista_dire_o_do_vento" translatable="false">Direção do vento:</string>
     <string name="aula10_lista_data_hora" translatable="false">Data/hora:</string>
     <string name="aula10_mediaDefaultMessage" translatable="false">Por favor, aguarde enquanto os dados são processados...</string>
+    <string name="ano" translatable="false">Ano</string>
+    <string name="aula_11adicionar" translatable="false">Adicionar</string>
+    <string name="aula_11buscar" translatable="false">Buscar</string>
+    <string name="modelo" translatable="false">Modelo</string>
+    <string name="valor" translatable="false">Valor</string>
+    <string name="salvar" translatable="false">Salvar</string>
+    <string name="excluir" translatable="false">Excluir</string>
+    <string name="atualizar" translatable="false">Atualizar</string>
+    <string name="sess_es" translatable="false">Sessões: </string>
+    <string name="entrar" translatable="false">Entrar</string>
     <string-array name="categoria_operacao">
         <item>+</item>
         <item>-</item>

@@ -17,43 +17,36 @@ public class MainActivity extends AppCompatActivity {
     public void aula1Click(View view) {
         Intent intent = new Intent(getApplicationContext(),Main1Activity.class);
         startActivity(intent);
-
     }
 
     public void aula2Click(View view) {
         Intent intent = new Intent(getApplicationContext(),Main2Activity.class);
         startActivity(intent);
-
     }
 
     public void aula3Click(View view) {
         Intent intent = new Intent(getApplicationContext(),Main3Activity.class);
         startActivity(intent);
-
     }
 
     public void aula4Click(View view) {
         Intent intent = new Intent(getApplicationContext(),Main4Activity.class);
         startActivity(intent);
-
     }
 
     public void aula5Click(View view) {
         Intent intent = new Intent(getApplicationContext(),Main5Activity.class);
         startActivity(intent);
-
     }
 
     public void aula6Click(View view) {
         Intent intent = new Intent(getApplicationContext(),Main6Activity.class);
         startActivity(intent);
-
     }
 
     public void aula7Click(View view) {
         Intent intent = new Intent(getApplicationContext(),Main7Activity.class);
         startActivity(intent);
-
     }
 
     public void aula8Click(View view) {
@@ -65,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
     public void aula9Click(View view) {
         Intent intent = new Intent(getApplicationContext(),Main9Activity.class);
         startActivity(intent);
-
     }
 
     public void aula10Click(View view) {
@@ -74,11 +66,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void aula11Click(View view) {
-
+        Intent intent = new Intent(getApplicationContext(),Main11_0ActivityLogin.class);
+        startActivity(intent);
     }
 
     public void aula12Click(View view) {
-
+        Intent intent = new Intent(getApplicationContext(),Main12Activity.class);
+        startActivity(intent);
     }
 
 }

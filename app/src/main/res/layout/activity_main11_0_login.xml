@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    tools:context=".Main11_0ActivityLogin">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:id="@+id/aula11_login_layout"
+        >
+
+        <EditText
+            android:id="@+id/aula11_user"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="usuário"
+            />
+
+        <EditText
+            android:id="@+id/aula11_pass"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="senha"
+            />
+        <Button
+            android:id="@+id/aula11_LoginBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/entrar"
+            android:onClick="login"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/aula11_sessao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/sess_es"
+        />
+
+    <TextView
+        android:id="@+id/aula11_countLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/aula11_sessao"
+        android:layout_toRightOf="@id/aula11_sessao"
+        android:text="0"
+        />
+
+</RelativeLayout>

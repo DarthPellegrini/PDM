@@ -15,7 +15,7 @@ public class Main7_2ActivityAdapter extends ArrayAdapter {
     private int[] colors;
     private int textViewResourceId;
 
-    protected Main7_2ActivityAdapter(Context context, int textViewResourceId, String[] objects, int[] colors) {
+    Main7_2ActivityAdapter(Context context, int textViewResourceId, String[] objects, int[] colors) {
         super(context, textViewResourceId, objects);
         this.textViewResourceId = textViewResourceId;
         this.colorNames = objects;
