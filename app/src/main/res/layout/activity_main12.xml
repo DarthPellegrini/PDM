@@ -18,7 +18,6 @@
             android:layout_marginTop="10sp"
             android:text="@string/grava_o"
             android:layout_gravity="center_horizontal"
-            android:textAllCaps="false"
             android:textSize="25sp"/>
 
         <EditText
