@@ -1,9 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="10dp"
     tools:context=".Main12Activity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:text="@string/grava_o"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:textSize="25sp"/>
+
+        <EditText
+            android:id="@+id/audioTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:hint="@string/insira_o_t_tulo_do_udio"
+            android:layout_gravity="center"
+            android:textAllCaps="false"/>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/btnStartRecording"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_record"
+                android:layout_gravity="center"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btnStopRecording"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/parar_e_salvar"
+                android:enabled="false"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:layout_toRightOf="@+id/btnStartRecording"/>
+
+        </RelativeLayout>
+
+
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:text="@string/exibir_udios_salvos_em_uma_lista"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:onClick="onClickListActivity"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:text="@string/exibir_udios_salvos_no_google_maps"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:onClick="onClickMapActivity"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="-60dp"
+        android:text="Activity Desenvolvida por:\nFernando da Costa Kudrna (78181)\nLeonardo Pellegrini Silva (78159)"
+        android:textColor="#222222"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

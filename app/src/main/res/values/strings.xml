@@ -74,10 +74,27 @@
     <string name="senha" translatable="false">senha</string>
     <string name="usuario" translatable="false">usuário</string>
     <string name="_0" translatable="false">0</string>
+    <string name="descri_o" translatable="false">Descrição:</string>
+    <string name="id" translatable="false">Id:</string>
+    <string name="title" translatable="false">Título</string>
+    <string name="grava_o" translatable="false">Gravador de Áudio</string>
+    <string name="insira_o_t_tulo_do_udio" translatable="false">Insira o título do Áudio</string>
+    <string name="exibir_udios_salvos_em_uma_lista" translatable="false">Exibir áudios salvos em uma lista</string>
+    <string name="exibir_udios_salvos_no_google_maps" translatable="false">Exibir áudios salvos no Google Maps</string>
+    <string name="gravar" translatable="false">Gravar</string>
+    <string name="parar_e_salvar" translatable="false">Parar e Salvar</string>
+    <string name="nenhum_dado_salvo" translatable="false">Nenhum dado salvo</string>
+    <string name="deletar" translatable="false">Deletar</string>
+    <string name="t_tulo" translatable="false">Título:</string>
+    <string name="data_e_hora" translatable="false">Data e Hora:</string>
+    <string name="latitude" translatable="false">Latitude:</string>
+    <string name="longitude" translatable="false">Longitude:</string>
+    <string name="alterar" translatable="false">Alterar</string>
     <string-array name="categoria_operacao">
         <item>+</item>
         <item>-</item>
         <item>*</item>
         <item>/</item>
     </string-array>
+    <string name="title_activity_maps" translatable="false">Map</string>
 </resources>

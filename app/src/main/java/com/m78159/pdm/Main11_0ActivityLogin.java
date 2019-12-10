@@ -37,6 +37,8 @@ public class Main11_0ActivityLogin extends AppCompatActivity {
             editor.apply();
             editor.commit();
             sessionCount.setText(String.valueOf(settings.getInt("count", 0)));
+            Intent intent = new Intent(getApplicationContext(), Main11Activity.class);
+            startActivity(intent);
         } else {
             if (user.getText().toString().equals(settings.getString("user",""))
                     && pass.getText().toString().equals(settings.getString("pass",""))) {
